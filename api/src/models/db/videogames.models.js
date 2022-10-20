@@ -20,18 +20,18 @@ const schemaVideoGame = {
         allowNull: false
     },
     release_date: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     rating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         defaultValue: 0
     }
 }
 
 class VideoGames extends Model{
     static associated(models) {
-        this.belongsToMany(models.Genders, {through: 'VideoGenders', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
+        this.belongsToMany(models.Genres, {through: 'VideoGenders', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
         this.belongsToMany(models.Platforms, {through: 'VideoPlatforms', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
     }
     static config(sequelize) {

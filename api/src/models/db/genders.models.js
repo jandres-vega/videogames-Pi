@@ -7,9 +7,10 @@ const schemaGenders = {
     }
 }
 
-class Genders extends Model{
+class Genres extends Model{
     static associated(models) {
-        this.belongsToMany(models.VideoGames, {through: 'VideoGenders', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
+        this.belongsToMany(models.VideoGames,
+            { as: 'genres', through: 'VideoGenders', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
     }
     static config(sequelize) {
         return {
@@ -20,5 +21,5 @@ class Genders extends Model{
 
 module.exports = {
     schemaGenders,
-    Genders
+    Genres
 }

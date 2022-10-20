@@ -5,7 +5,7 @@ const API = `https://api.rawg.io/api/games?key=${KEY}&page_size=80`;
 const API_GENRES = `https://api.rawg.io/api/genres?key=${KEY}`;
 const API_PLATFORMS = `https://api.rawg.io/api/platforms?key=${KEY}`;
 
-async function getAllGames() {
+async function getAllGamesApi() {
 
     try {
         const games = (await axios.get(API)).data;
@@ -17,8 +17,8 @@ async function getAllGames() {
                 image: item.background_image,
                 release_date: item.released,
                 rating: item.rating,
-                platforms: item.platforms.map(item => item.platform.name),
-                genres: item.genres.map(item => item.name)
+                genres: item.genres.map(item => item.name),
+                platforms: item.platforms.map(item => item.platform.name)
             }
         })
     }catch (e) {
@@ -29,7 +29,6 @@ async function getAllGames() {
 async function getGameById(id) {
     try {
         const gameId = (await axios.get(`https://api.rawg.io/api/games/${id}?key=${KEY}`)).data;
-        console.log(gameId)
         return {
             id: gameId.id,
             name_game: gameId.name,
@@ -74,7 +73,7 @@ async function getAllPlatforms() {
 }
 
 module.exports = {
-    getAllGames,
+    getAllGamesApi,
     getAlGenres,
     getAllPlatforms,
     getGameById
