@@ -5,7 +5,7 @@ import styleLanding from './LandingPage.module.scss';
 
 const LandingPage = () => {
     return (
-        <div className={styleLanding.landing}>
+        <div >
             <div className={styleLanding.center}>
                 <Link to={'/home'}>
                     <ButtonLanding />

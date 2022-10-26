@@ -1,0 +1,16 @@
+.selectOptions {
+  width: 90%;
+  height: 40px;
+  border-style: dot-dash;
+  border-radius: 5px;
+  margin: 10px 10px 80px 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: yellow;
+  outline: none;
+  option {
+    color: yellow;
+    background-color: black;
+    text-align: center;
+  }
+}

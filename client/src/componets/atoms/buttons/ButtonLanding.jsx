@@ -1,5 +1,5 @@
 import React from 'react';
-import styleButton from './styles/ButtonLanding.module.scss';
+import styleButton from './ButtonLanding.module.scss';
 
 const ButtonLanding = () => {
     return (

@@ -1,0 +1,35 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: aliceblue 2px;
+  border-bottom: 2px solid;
+  color: white;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.8;
+  .div_icon {
+    margin-left: 50px;
+    place-content: center;
+    align-self: center;
+  }
+  .aboutContact {
+  }
+  .div_search {
+    align-self: center;
+    text-align: right;
+    margin-right: 50px;
+  }
+
+  .aboutContact li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .aboutContact a {
+    color: Yellow;
+    cursor: pointer;
+    font-size: 25px;
+  }
+}

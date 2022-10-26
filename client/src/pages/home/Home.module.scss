@@ -1,0 +1,13 @@
+.containerMain {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  .listCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+.loading {
+  color: yellow;
+}
