@@ -3,11 +3,12 @@ import styleSearch from './Search.module.scss';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
-const Search = () => {
+const Search = ({prueba}) => {
+
     return (
-        <React.Fragment>
-            <FontAwesomeIcon className={styleSearch.iconSearch} icon={faMagnifyingGlass} />
-        </React.Fragment>
+        <div className={styleSearch.div_search}>
+            <FontAwesomeIcon className={styleSearch.iconSearch} icon={faMagnifyingGlass} onClick={prueba}/>
+        </div>
     );
 };
 

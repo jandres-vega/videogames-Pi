@@ -17,6 +17,8 @@
   .aboutContact {
   }
   .div_search {
+    display: flex;
+    justify-content: flex-end;
     align-self: center;
     text-align: right;
     margin-right: 50px;
